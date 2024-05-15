@@ -1,0 +1,14 @@
+<div class="instrument text-white d-flex">
+  <div class="img-wrapper">
+    <img src="{{ instrument.photo }}" alt="" />
+  </div>
+  <div class="info border-start">
+    <div class="d-flex align-items-center">
+      <a routerLink="/instruments" class="back"><</a>
+      <h3 class="my-5 text-center text-primary">
+        {{ instrument.name }}
+      </h3>
+    </div>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ instrument.text }}</p>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="instruments text-white">
+  <h1 class="mt-5 text-center text-primary">Инструменты</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 links-box">
+        @for (
+          instrument of instruments;
+          track instrument.name;
+          let i = $index
+        ) {
+          <a [routerLink]="['/instruments', i]" class="ins-link">
+            <span class="circle">{{ i + 1 }}</span>
+            <span class="name">
+              {{ instrument.name }}
+            </span>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</div>

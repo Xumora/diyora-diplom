@@ -1,0 +1,43 @@
+<div class="videos d-flex">
+  <div class="big-video d-flex align-items-center justify-content-center">
+    <div class="video-card" (click)="showVideo('../../assets/video-1.mp4')">
+      <img src="../../assets/video-1.png" />
+      <p class="text-white text-center">Сварка оптического волокна</p>
+    </div>
+  </div>
+  <div class="small-videos">
+    <div
+      class="first-small-video d-flex align-items-center justify-content-center"
+    >
+      <div class="video-card" (click)="showVideo('../../assets/video-2.mp4')">
+        <img src="../../assets/video-2.png" />
+        <p class="text-white text-center">
+          Из чего сделано оптоволоконный кабель
+        </p>
+      </div>
+    </div>
+    <div
+      class="second-small-video d-flex align-items-center justify-content-center"
+    >
+      <div class="video-card" (click)="showVideo('../../assets/video-3.mp4')">
+        <img src="../../assets/video-3.png" />
+        <p class="text-white text-center">Оптическое волокно на связи</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="video d-flex" [ngClass]="{ show: isShowVideo }">
+  <div
+    class="close text-white border-end d-flex align-items-center justify-content-center"
+    (click)="hideVideo()"
+  >
+    >
+  </div>
+  <div class="video-wrapper">
+    <video controls #video>
+      <source src="{{ videoSource }}" type="video/mp4" />
+      Browser not supported
+    </video>
+  </div>
+</div>

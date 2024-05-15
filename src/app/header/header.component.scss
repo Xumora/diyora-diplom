@@ -1,0 +1,15 @@
+.header {
+  height: 64px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+}
